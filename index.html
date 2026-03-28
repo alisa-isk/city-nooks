@@ -7,33 +7,20 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="default" />
     <title>City Nooks</title>
     <style>
-     * { margin: 0; padding: 0; box-sizing: border-box; }
-html, body { height: 100%; }
-body { 
-  display: flex; 
-  justify-content: center; 
-  align-items: center; 
-  background: #e8e4d8; 
-  font-family: 'DM Sans', sans-serif;
-}
-#root {
-  width: 375px;
-  height: 812px;
-  transform: scale(calc(min(100vw / 375, 100vh / 812) * 0.95));
-  border-radius: 40px;
-  overflow: hidden;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
-}
-@media (max-width: 500px) {
-  body { background: #FBF8EF; }
-  #root {
-    width: 100vw;
-    height: 100dvh;
-    transform: none;
-    border-radius: 0;
-    box-shadow: none;
-  }
-}
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html, body, #root { min-height: 100%; }
+      body {
+        margin: 0;
+        background: #e8e4d8;
+        font-family: 'DM Sans', sans-serif;
+      }
+      #root {
+        width: 100%;
+      }
+
+      @media (max-width: 500px) {
+        body { background: #FBF8EF; }
+      }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
   </head>
