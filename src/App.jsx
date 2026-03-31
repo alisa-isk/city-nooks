@@ -900,13 +900,13 @@ function WriteReviewScreen({ nav, pid, userReviews, setUserReviews }) {
             <Stars rating={rating} onRate={v => setRating(v === rating ? 0 : v)} size={28} />
           </div>
         </div>
-        <h3 style={{ fontSize: 16, fontWeight: 700, color: C.dark, margin: "0 0 12px", fontFamily: FNT, textDecoration: "underline" }}>Rate the following:</h3>
+        <h3 style={{ fontSize: 16, fontWeight: 700, color: C.dark, margin: "0 0 12px", fontFamily: FNT, textDecoration: "underline" }}>Rate the Following:</h3>
         <RadioScale label="Noise:" leftLabel="Silent" rightLabel="Very loud" value={noise} onChange={setNoise} />
-        <RadioScale label="Crowded level:" leftLabel="Empty" rightLabel="Very crowded" value={crowd} onChange={setCrowd} />
-        {!isPhysical && <RadioScale label="Seating availability:" leftLabel="None" rightLabel="Plenty" value={seating} onChange={setSeating} />}
-        {!isPhysical && <RadioScale label="Wi-Fi quality:" leftLabel="None" rightLabel="Excellent" value={wifi} onChange={setWifi} />}
+        <RadioScale label="Crowded Level:" leftLabel="Empty" rightLabel="Very crowded" value={crowd} onChange={setCrowd} />
+        {!isPhysical && <RadioScale label="Seating Availability:" leftLabel="None" rightLabel="Plenty" value={seating} onChange={setSeating} />}
+        {!isPhysical && <RadioScale label="Wi-Fi Quality:" leftLabel="None" rightLabel="Excellent" value={wifi} onChange={setWifi} />}
         <div style={{ marginBottom: 16 }}>
-          <label style={{ fontSize: 16, fontWeight: 700, color: C.dark, display: "block", marginBottom: 10, fontFamily: FNT }}>Suggested tags:</label>
+          <label style={{ fontSize: 16, fontWeight: 700, color: C.dark, display: "block", marginBottom: 10, fontFamily: FNT }}>Suggested Tags:</label>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
             {availTags.map(t => { const on = selTags.has(t); return <button key={t} onClick={() => tagToggle(t)} style={{ padding: "7px 14px", borderRadius: 16, border: `1.5px solid ${on ? C.salmon : C.grayLighter}`, background: on ? C.salmonLight : "transparent", color: C.dark, fontSize: 12, fontFamily: FNT, cursor: "pointer", transition: "all 0.15s" }}>{t}</button>; })}
           </div>
