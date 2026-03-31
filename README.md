@@ -62,14 +62,14 @@ npm run dev
 | Requirement | Implementation |
 |-------------|---------------|
 | **R1:** Real-time capacity and facility availability | Current Activity busy meter with check-in counts and color-coded status bar on every place detail page |
-| **R2:** Nearby, easy-to-reach suggestions for fatigued users | Distance displayed on every card, distance-based filtering, quiz captures preferred travel range |
+| **R2:** Nearby, easy-to-reach suggestions for fatigued users | Distance displayed on every card, distance-based ordering, quiz captures preferred travel range |
 | **R3:** Clarify social rules and venue expectations | "What to Expect" box with emoji-coded house rules on every place (e.g., laptop policies, noise expectations, dress codes) |
 | **R4:** Help people find community through activities | Friends feed with check-ins and reviews, friend discovery search, quiz goal "To find and meet friends", activity-based place tags |
 | **R5:** Indicate social density for individual focus | Busy meter, noise/crowd dot-scale ratings in reviews, "Quiet & focused" vibe filter option |
 
 ---
 
-## Design Decisions & Tradeoffs (G2)
+## Some Design Decisions & Tradeoffs
 
 - **Session-only data:** The prototype resets on reload — all check-ins, reviews, and favorites are stored in React state rather than a backend. This was a deliberate tradeoff to keep the prototype lightweight and focused on demonstrating interaction patterns rather than persistence.
 - **Simulated real-time data:** The busy meter uses a deterministic formula based on place ID to simulate check-in counts. In a production version, this would pull from actual user check-ins.
