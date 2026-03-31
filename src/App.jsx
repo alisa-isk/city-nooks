@@ -906,7 +906,7 @@ function WriteReviewScreen({ nav, pid, userReviews, setUserReviews }) {
         {!isPhysical && <RadioScale label="Seating availability:" leftLabel="None" rightLabel="Plenty" value={seating} onChange={setSeating} />}
         {!isPhysical && <RadioScale label="Wi-Fi quality:" leftLabel="None" rightLabel="Excellent" value={wifi} onChange={setWifi} />}
         <div style={{ marginBottom: 16 }}>
-          <label style={{ fontSize: 16, fontWeight: 700, color: C.dark, display: "block", marginBottom: 10, fontFamily: FNT }}>Tags:</label>
+          <label style={{ fontSize: 16, fontWeight: 700, color: C.dark, display: "block", marginBottom: 10, fontFamily: FNT }}>Suggested tags:</label>
           <div style={{ display: "flex", flexWrap: "wrap", gap: 8 }}>
             {availTags.map(t => { const on = selTags.has(t); return <button key={t} onClick={() => tagToggle(t)} style={{ padding: "7px 14px", borderRadius: 16, border: `1.5px solid ${on ? C.salmon : C.grayLighter}`, background: on ? C.salmonLight : "transparent", color: C.dark, fontSize: 12, fontFamily: FNT, cursor: "pointer", transition: "all 0.15s" }}>{t}</button>; })}
           </div>
